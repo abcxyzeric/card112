@@ -240,13 +240,13 @@ async function l() {
 }
 function c() {
   const t = getScriptButtons(),
-    n = t.some(t => t.name === e || t.name === '开场白索引')
-      ? t.map(t => (t.name === e || t.name === '开场白索引' ? { ...t, visible: !0 } : t))
+    n = t.some(t => t.name === e || t.name === 'Chỉ mục lời mở đầu')
+      ? t.map(t => (t.name === e || t.name === 'Chỉ mục lời mở đầu' ? { ...t, visible: !0 } : t))
       : [...t, { name: e, visible: !0 }];
   return (
     replaceScriptButtons(n),
     appendInexistentScriptButtons([{ name: e, visible: !0 }]),
-    getScriptButtons().some(t => (t.name === e || t.name === '开场白索引') && t.visible)
+    getScriptButtons().some(t => (t.name === e || t.name === 'Chỉ mục lời mở đầu') && t.visible)
   );
 }
 $(() => {
@@ -268,7 +268,7 @@ $(() => {
   eventOn(getButtonEvent(e), () => {
     errorCatched(l)();
   });
-  eventOn(getButtonEvent('开场白索引'), () => {
+  eventOn(getButtonEvent('Chỉ mục lời mở đầu'), () => {
     errorCatched(l)();
   });
   eventOn(tavern_events.CHAT_CHANGED, () => {
